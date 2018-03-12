@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/sam.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway" rel="stylesheet">
+
+    <style>
+    /* Make the image fully responsive */
+    .carousel-inner img {
+        width: 100%;
+        height: 100%;
+    }
+    </style>
+
+    <!-- Begin -->
+    </head>
+        <body>
+        <!-- Navigation -->
+        <div class="container">
+            <nav class="navbar navbar-toggleable-sm navbar-light bg-faded">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand mb-0" href="#" style="font-family: Lobster">S & J</a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/information.html">Information</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/rsvp.html">RSVP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" style="text">Wedding Photos <span class="badge badge-secondary">Coming Soon!</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- End Navigation -->
+        <div class="container">
+            <div class="jumbotron jumbotron-fluid">
+                <h1 class="display-3" style="text-align: center; font-family:Lobster">RSVP Now</h1>
+                <div class="panel panel-default">
+                    <div class="panel-body" style="padding: 10px">
+                        <div id="rsvp_fields"></div>
+                        <div>
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" class="form-control" id="name" name="name[]" value="" placeholder="Sam Herring">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="form-group">
+                                <label for="email">Contact Email</label>
+                                <input type="email" class="form-control" id="Email" name="Email[]" value="" placeholder="example@test.com">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="form-group">
+                                <label for="dietary">Any dietary requriements?</label>
+                                <textarea class="form-control" aria-describedby="deitaryHelp" id="dietary" name="Dietary[]" value="" placeholder="I have Coeliac's Disease and it's really hard for me to eat cake."></textarea>
+                                <small id="dietaryHelp" class="form-text text-muted">We can cater for Ceoliacs and probably other fussy folk as well.</small>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="form-group">
+                                <div style="padding-top: : 10px">
+                                    <button class="btn btn-primary btn-lg btn-block" type="button"  onclick="rsvp_fields();"><span aria-hidden="true">Add A Guest</span> </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mandatory Bootstrap -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+        <script>
+            var room = 1;
+            function rsvp_fields() {
+
+            room++;
+            var objTo = document.getElementById('rsvp_fields')
+            var divtest = document.createElement("div");
+            divtest.setAttribute("class", "form-group removeclass"+room);
+            var rdiv = 'removeclass'+room;
+            divtest.innerHTML =
+                '<div class="panel panel-default"><div class="panel-body" style="padding: inherit"><div id="rsvp_fields"></div><div><div class="form-group"><label for="name">Full Name</label><input type="text" class="form-control" id="name" name="name[]" value="" placeholder="Sam Herring"></div></div><div><div class="form-group"><label for="email">Contact Email</label><input type="email" class="form-control" id="Email" name="Email[]" value="" placeholder="example@test.com"></div></div><div><div class="form-group"><label for="dietary">Any dietary requriements?</label><textarea class="form-control" aria-describedby="deitaryHelp" id="dietary" name="Dietary[]" value="" placeholder="I have Coeliac\'s Disease and it\'s really hard for me to eat cake."></textarea><small id="dietaryHelp" class="form-text text-muted">We can cater for Ceoliacs and probably other fussy folk as well.</small></div></div><div><div class="form-group"><div style="padding-top: 10px"><button class="btn btn-danger btn-lg btn-block" type="button"  onclick="remove_rsvp_fields('+ room +');"><span aria-hidden="true">Remove This Guest</span> </button></div></div></div></div></div>';
+            objTo.appendChild(divtest)
+        }
+           function remove_rsvp_fields(rid) {
+               $('.removeclass'+rid).remove();
+           }
+        </script>
+    </body>
+</html>
