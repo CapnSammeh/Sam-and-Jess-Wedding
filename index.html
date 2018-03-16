@@ -23,6 +23,8 @@
     <!-- Begin -->
     </head>
         <body>
+
+
         <!-- Navigation -->
         <div class="container container-fluid">
             <nav class="navbar navbar-toggleable-sm navbar-light bg-faded">
@@ -48,7 +50,6 @@
                 </div>
             </nav>
         </div>
-        <!-- End Navigation -->
 
         <!-- Mobile Device Header -->
         <div class="d-block d-sm-block d-lg-none">
@@ -58,18 +59,9 @@
 
         <!-- Carousel -->
         <div class="container container-fluid">
-            <div class="container container-fluid" style="width: 100%">
-
-            <!-- Static Overlay -->
-            <div class="d-none d-lg-block" style="color: black; top: 50%; left: 50%; z-index: 12">
-                <div style="user-select: none; font-family:Lobster; font-size:10vh; text-align: center">Sam and Jess</div>
-                <div style="user-select: none; font-family:Raleway; font-size:5vh; text-align: center">August 2019</div>
-            </div>
-
+            <!-- Slideshow -->
             <div id="index_carousel" class="carousel slide" data-ride="carousel">
-
-                <!-- Slideshow -->
-                <div class="carousel-inner" style="height: 10%; overflow: hidden">
+                <div class="carousel-inner" >
                     <div class="carousel-item active">
                         <img class="d-block img-fluid" src="images/background12.jpg" alt="Los Angeles">
                     </div>
@@ -82,17 +74,15 @@
                 </div>
             </div>
         </div>
-        <!-- Carousel -->
 
         <!-- Countdown Timer -->
-        <div class="container text-center">
-            <div class="jumbotron jumbotron-fluid">
+        <div class="container container-fluid">
+            <div class="jumbotron text-center">
                 <h1 style="user-select: none; text-align: center">It's Official</h1>
                 <p style="user-select: none; text-align: center" id="countdown"></p>
                 <a href="/rsvp.html" class="btn btn-info" role="button">RSVP Now</a>
             </div>
         </div>
-        <!-- End Countdown Timer -->
 
         <!-- Start Content -->
         <div class="container container-fluid">
@@ -100,8 +90,6 @@
             <div class="centered">This is the text we're showing</div>
         </div>
 
-        <!-- End Content -->
-     </div>
         <!-- Countdown Timer -->
         <script>
             // Set the date we're counting down to
@@ -141,7 +129,8 @@
                     }
             }, 1000);
         </script>
-        <!-- Mandatory Bootstrap -->
+
+         <!-- Mandatory Bootstrap -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

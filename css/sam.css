@@ -43,7 +43,7 @@ p {
 }
 
 html, body {
-    padding-top: 20px;
+    padding-top: 1em;
 }
 
 [data-role="dynamic-fields"] > .form-inline + .form-inline {
