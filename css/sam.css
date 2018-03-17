@@ -56,3 +56,9 @@ small {
     font-family: Raleway;
 
 }
+
+.carousel-inner {
+    border-radius: 4.3px;
+    background-color: rgba(0,0,0,0);
+    overflow: hidden;
+}
