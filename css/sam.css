@@ -9,8 +9,12 @@
       bottom: 0;
 }
 
-.item {
+.nav-link {
     position:relative;
+}
+
+.nav-link {
+  color: black;
 }
 
 .center {
