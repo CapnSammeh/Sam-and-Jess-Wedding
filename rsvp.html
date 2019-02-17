@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
     <link rel="stylesheet" href="css/sam.css">
-
     <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway" rel="stylesheet">
 
     <title>Sam & Jess</title>
-
     </head>
         <body>
-
             <!-- Navigation -->
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light bg-none">
@@ -47,61 +42,30 @@
                     </div>
                 </nav>
             </div>
-
-            <!-- Form Begin -->
-
-
-            <!-- RSVP's Powered by Netlify || https://netlify.com -->
-            <!--
-                We Need:
-                    - RSVP By: Notice
-                    - Name: Name Field
-                    - Email Address: Email Field
-                    - Guests: Some fancy button that adds a new set of Name and Diatary Requirements
-                        - Help Field: "Please specify the names of those that will be joinging you (including children)".
-                    - Meal Options: Notice
-                    - Diatary Requirements: Multi-Line Text Field
-                    - Accept/Decline: Select Box
-            -->
             <div class="container">
                 <div class="jumbotron">
-                    <h1 style="text-align: center">RSVP</h1>
+                    <h1 style="text-align: center">RSVP</h1><hr />
                     <div class="panel panel-default">
                         <form method="POST" netlify>
                             <div class="panel-body" style="padding: 10px">
-                                <div>
                                     <div class="form-group">
                                         <label for="name">Full Name</label>
                                         <input type="text" class="form-control" id="name" name="Full Name" value="" placeholder="Sam Herring">
                                     </div>
-                                </div>
-                                <div>
+                                    <div class="form-group" id ="newPerson"></div>
                                     <div class="form-group">
                                         <label for="mobile">Contact Phone Number</label>
                                         <input type="tel" class="form-control" id="mobile" name="Mobile Number" value="" placeholder="0414123456">
                                     </div>
-                                </div>
-                                <div>
                                     <div class="form-group">
                                         <label for="email">Contact Email</label>
                                         <input type="email" class="form-control" id="Email" name="Email Address" value="" placeholder="example@test.com">
                                     </div>
-                                </div>
-                                <div>
-                                    <div class="form-group">
-                                        <p>Please note; we have an alternate drop menu, with the following options</p>
-                                        <p style="padding-left: 10px"> - Example 1</p>
-                                        <p style="padding-left: 10px"> - Example 2</p>
-                                        <p style="padding-left: 10px"> - Example 3</p>
-                                    </div>
-                                </div>
-                                <div>
                                     <div class="form-group">
                                         <label for="dietary">Any dietary requriements?</label>
                                         <textarea class="form-control" aria-describedby="deitaryHelp" id="dietary" name="Dietary Requirements" value="" placeholder="I have Coeliac's Disease and it's really hard for me to eat cake."></textarea>
                                         <small id="dietaryHelp" class="form-text text-muted">We can cater for Ceoliacs and probably other fussy folk as well.</small>
                                     </div>
-                                </div>
                                 <div class="form-group">
                                     <label for="attending">Are you joining us?</label>
                                     <select class="form-control" id="attending" name="Attending?">
@@ -109,45 +73,24 @@
                                         <option>No, sorry!</option>
                                     </select>
                                 </div>
-                                <div>
-                                  <div id="rsvp_fields"></div>
-                                    <div class="form-group">
-                                        <div style="padding: 10px">
-                                            <button aria-describedby="addUserHelp" class="btn btn-primary btn-lg btn-block" type="button"  onclick="rsvp_fields();"><span aria-hidden="true">Add A Guest</span> </button>
-                                            <small id="addUserHelp" class="form-text text-muted">Please specify the names of those that will be joining you (including children).</small>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="form-group">
-                                    <div style="padding: 10px">
-                                        <button aria-describedby="submit" class="btn btn-success btn-lg btn-block"type="submit">Submit!</button>
+                                  <div id="rsvp_fields">
+                                    <div class="form-group">
+                                      <div style="padding: 10px">
+                                        <button aria-describedby="addPerson" class="btn btn-primary btn-lg btn-block" type="button" onclick="return addPerson()">Add Person</button>
+                                        <button aria-describedby="submit" class="btn btn-success btn-lg btn-block" type="submit">Submit!</button>
                                     </div>
+                                  </div>
                                 </div>
                             </div>
                         </form>
                     </div>
+                  </div>
                 </div>
             </div>
             <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-            <script>
-                var room = 1;
-                function rsvp_fields() {
-
-                room++;
-                var objTo = document.getElementById('rsvp_fields')
-                var divtest = document.createElement("div");
-                divtest.setAttribute("class", "form-group removeclass"+room);
-                var rdiv = 'removeclass'+room;
-
-                divtest.innerHTML =
-                    '<form method="POST" netlify><div class="panel panel-default"><div class="panel-body" style="padding: 10px"><div id="rsvp_fields"></div><div><div class="form-group"><hr><nr<label for="name">Full Name</label><input type="text" class="form-control" id="name" name="name[]" value="" placeholder="Sam Herring"></div></div><div><div class="form-group"></div></div><div><div class="form-group"><p>Please note; we have an alternate drop menu, with the following options</p><p style="padding-left: 10px"> - Example 1</p><p style="padding-left: 10px"> - Example 2</p><p style="padding-left: 10px"> - Example 3</p></div></div><div><div class="form-group"><label for="dietary">Any dietary requriements?</label><textarea class="form-control" aria-describedby="deitaryHelp" id="dietary" name="Dietary[]" value="" placeholder="I have Coeliac\'s Disease and it\'s really hard for me to eat cake."></textarea><small id="dietaryHelp" class="form-text text-muted">We can cater for Ceoliacs and probably other fussy folk as well.</small></div></div><div class="form-group"><label for="attending">Are you joining us?</label><select class="form-control" id="attending"><option>Yes please!</option><option>No, sorry!</option></select></div><div><div class="form-group"><div style="padding: 10px"><button aria-describedby="addUserHelp" class="btn btn-danger btn-lg btn-block" type="button"  onclick="remove_rsvp_fields('+ room +');"><span aria-hidden="true">Remove this Guest</span> </button></div></div></div></div></div></form>';
-                objTo.appendChild(divtest)
-            }
-               function remove_rsvp_fields(rid) {
-                   $('.removeclass'+rid).remove();
-               }
-            </script>
+            <script src="addPerson.js"></script>
     </body>
-</html>ds
+</html>
