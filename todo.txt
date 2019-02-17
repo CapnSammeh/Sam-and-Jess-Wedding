@@ -1,0 +1,31 @@
+ - Get some photos of Sam and Jess and replace the Carousel photos
+ - Create a color pallete page using the following color scheme:
+   - https://coolors.co/7ba1c6-576a93-d9d9db-f2dede-edc1bb
+ - Maleny Manor Info:
+    - Date and Time
+    - The address (Google Maps link)
+    - Dress Code
+      - Grassed venue; Please wear appropriate footwear
+      - Semi-Formal Wear
+    - Guests cannot arrive before 4:00PM due to other bookings at the venue.
+    - Parking is available at the venue.
+  - Nirvana @ Montville Info
+    - Limited venue parking, please find street parking unless otherwise advised.
+    - Dinner, nibbles and drinks provided
+    - Accommodation nearby:
+      - Walking Distance from Nirvana
+        - Belle's at Montville (~$250/night)
+        - Montagues of Montville (~$295/night)
+        - Kondalilla Eco Resort (~$177/night)
+        - Treetop Montville (~$230/night)
+      - Short Drive from Nirvana
+        - Altitude (~$189/night)
+        - The Falls Montville (~$280/night)
+        - Any other accommodation on Montville Mapleton Road.
+  - Map information
+    - Update the Maleny Manor Map Icon to include info on the ceremony.
+  - Contact Informaiton
+    - Sam and Jess' Mobile Number
+  - RSVP Page
+    - Remove Alt Drop Info
+    - Fix the whole "Additional Users" thing
