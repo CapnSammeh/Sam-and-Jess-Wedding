@@ -1,6 +1,3 @@
  - Get some photos of Sam and Jess and replace the Carousel photos
   - Map information
     - Update the Maleny Manor Map Icon to include info on the ceremony.
-  - RSVP Page
-    - Remove Alt Drop Info
-    - Fix the whole "Additional Users" thing
