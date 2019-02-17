@@ -7,7 +7,6 @@ function addPerson(){
   addedPersons++;
   var div = document.createElement("div");
   div.setAttribute("class", "form-group");
-  div.setAttribute("id", "newperson" + addedPersons);
   container.appendChild(div);
 
   var label = document.createElement("label");
@@ -19,6 +18,7 @@ function addPerson(){
   input.setAttribute("type", "text");
   input.setAttribute("class", "form-control");
   input.id = "name" + addedPersons;
+  input.setAttribute("name", "Full Name " + addedPersons);
   div.appendChild(input);
 
   console.log(addedPersons);
