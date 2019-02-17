@@ -15,8 +15,6 @@ function addPerson(){
   netlifyInput.setAttribute("value", "rsvp");
   container.appendChild(div);
 
-  <input type="hidden" name="form-name" value="rsvp" />
-
   var label = document.createElement("label");
   label.htmlFor = "name" + addedPersons;
   label.innerHTML = "Full Name " + addedPersons;
