@@ -9,12 +9,6 @@ function addPerson(){
   div.setAttribute("class", "form-group");
   container.appendChild(div);
 
-  var netlifyInput = document.createElement("input");
-  netlifyInput.setAttribute("type", "hidden");
-  netlifyInput.setAttribute("name", "form-name");
-  netlifyInput.setAttribute("value", "rsvp");
-  container.appendChild(div);
-
   var label = document.createElement("label");
   label.htmlFor = "name" + addedPersons;
   label.innerHTML = "Full Name " + addedPersons;
