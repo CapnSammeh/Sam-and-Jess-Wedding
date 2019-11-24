@@ -40,6 +40,3 @@ function createPhotoGrid(photoArray) {
   console.log("Added " + photoArray.length + " photos");
 
 }
-
-photoArrayOriginal = httpGet('https://cors-anywhere.herokuapp.com/https://google-photos-album-demo.glitch.me/EuoAtSJXiMFD99n48');
-createPhotoGrid(photoArrayOriginal);
