@@ -1,5 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Lobster)
-@import url(https://fonts.googleapis.com/css?family=Raleway)
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
 
 .absolute-div {
     position: absolute;
@@ -8,6 +8,59 @@
       right: 0;
       bottom: 0;
 }
+
+.carousel {
+    width: auto;
+    overflow: hidden;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .carousel {
+      /* Pushes out the margins on mobile devices so it lines up with the article body. */
+      margin-left: -20px !important;
+      margin-right: -20px !important;
+      width: inherit !important;
+    }
+  }
+  
+  .carousel:hover {
+    visibility: visible;
+    color: white;
+  }
+  
+  .carousel .carousel > .carousel-control {
+    visibility: hidden;
+  }
+  
+  .carousel .carousel-control {
+    visibility: visible;
+    color: white;
+  }
+  
+  .carousel .carousel-inner {
+    background-color: #000000;
+  }
+  
+  .carousel .carousel-caption {
+    position: relative;
+    left: auto;
+    right: auto;
+    padding-bottom: 0;
+  }
+  
+  .carousel .item img {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100%;
+  }
+  
+  // added
+  
+  .carousel .item img {
+     max-height: 768px;
+     min-width: auto;
+   }
+  
 
 .nav-link {
     position: relative;
